@@ -2,7 +2,8 @@ cask "piron-orbit" do
   version "2026.6.22"
   sha256 "cfc152cbd1c65ce0110937f536a51f5c1f9d683466f2bf5eb6783d399f3158f1"
 
-  url "https://github.com/yuyakinjo/homebrew-tap/releases/download/piron-orbit-v#{version}/Piron-Orbit_#{version}_aarch64.zip"
+  url "https://github.com/yuyakinjo/homebrew-tap/releases/download/piron-orbit-v#{version}/Piron-Orbit_#{version}_aarch64.zip",
+      verified: "github.com/yuyakinjo/homebrew-tap/"
   name "Piron Orbit"
   desc "Git workflow controller"
   homepage "https://github.com/yuyakinjo/homebrew-tap"
