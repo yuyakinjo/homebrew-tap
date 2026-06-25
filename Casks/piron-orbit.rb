@@ -1,15 +1,22 @@
 cask "piron-orbit" do
-  version "2026.6.25"
-  sha256 "e72de4d47843b204323f1af622af7bf9c2073cf48b462546cdacd58c29f858c5"
+  version "2026.6.2505"
+  sha256 "6cb3249114c1ff6a1ce304b2d6533fa685b4783b4027ee9ca6908a08360415db"
 
   url "https://github.com/yuyakinjo/homebrew-tap/releases/download/piron-orbit-v#{version}/Piron-Orbit_#{version}_aarch64.zip"
   name "Piron Orbit"
   desc "Git workflow controller"
   homepage "https://github.com/yuyakinjo/homebrew-tap"
 
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "Piron Orbit.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Piron Orbit.app"],
+                   print_stderr: false
+  end
 
   zap trash: [
     "~/Library/Application Support/Piron Orbit",
