@@ -6,6 +6,8 @@ Homebrew tap for Piron Orbit.
 
 Piron Orbit is distributed as a macOS arm64 Homebrew Cask.
 
+![Piron Orbit controller screen](assets/piron-orbit-controller.png)
+
 ### Install
 
 ```bash
