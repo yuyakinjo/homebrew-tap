@@ -1,6 +1,6 @@
 cask "piron-orbit" do
-  version "2026.6.27"
-  sha256 "70c2c5fb18288ec6e17dfb5da22a8ddcd8a833e9e4744751a802ccb55fc2b38e"
+  version "2026.6.28"
+  sha256 "5fc1539ea46685f0fea45eaeebe38f6bddbcadabc98960a22a257c724e5e7e4f"
 
   url "https://github.com/yuyakinjo/homebrew-tap/releases/download/piron-orbit-v#{version}/Piron-Orbit_#{version}_aarch64.zip"
   name "Piron Orbit"
