@@ -7,15 +7,16 @@ cask "piron-orbit" do
   desc "Git workflow controller"
   homepage "https://github.com/yuyakinjo/homebrew-tap"
 
-  depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on :macos
 
   app "Piron Orbit.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Piron Orbit.app"],
-                   print_stderr: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/Piron Orbit.app"],
+        must_succeed: false,
+        print_stderr: false
   end
 
   zap trash: [
