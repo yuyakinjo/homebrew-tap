@@ -1,6 +1,6 @@
 cask "git-squid" do
-  version "2026.10.122124"
-  sha256 "09dade590c3e624561cf1549e391ec7af7d2734dac93396f2282cfe51352a6ba"
+  version "2026.10.122305"
+  sha256 "2e1240744a6a4b177525fdd296e0c367d5382bb15d3166eed5a8fec86136a8ed"
 
   url "https://github.com/yuyakinjo/homebrew-tap/releases/download/git-squid-v#{version}/GitSquid_#{version}_aarch64.zip"
   name "GitSquid"
