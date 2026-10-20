@@ -1,12 +1,14 @@
 cask "git-squid" do
-  version "2026.10.201113"
-  sha256 "d10850757b0a97df25470e1fe98682a8b74ca2e05ac6f7e76e0ef13a55e16ac2"
+  version "2026.10.201617"
+  sha256 "ef96ecadba6234b95dee72deba9ba8fed29f64560b5de4103d7b1803880767a5"
 
   url "https://github.com/yuyakinjo/homebrew-tap/releases/download/git-squid-v#{version}/GitSquid_#{version}_aarch64.zip"
   name "GitSquid"
   desc "Simple Git GUI with a GitKraken-style commit graph"
   homepage "https://github.com/yuyakinjo/homebrew-tap"
 
+  # 入れたあとはアプリ内更新で上がるので、brew upgrade (--greedy なし) では触らない
+  auto_updates true
   depends_on arch: :arm64
   depends_on :macos
 
