@@ -7,6 +7,8 @@ cask "piron-orbit" do
   desc "Git workflow controller"
   homepage "https://github.com/yuyakinjo/homebrew-tap"
 
+  disable! date: "2026-10-31", because: "has been replaced by GitSquid", replacement_cask: "git-squid"
+
   depends_on arch: :arm64
   depends_on :macos
 
